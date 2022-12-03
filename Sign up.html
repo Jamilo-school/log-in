@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jamilo school</title>
+    <!---custom css link--->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  
+  </head>
+<body>
+  
+    <form action="/login" method="post">
+      <h1> Jamilo school</h1><br>
+      <h1> Sign Up</h1><br>
+        <label for="email" >Email:</label><br>
+        <input type="text" id="email" name="email" placeholder="Enter a valid email"><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" placeholder="Enter password"><br>
+        <label for="phone">Phone Number:</label><br>
+        <input type="text" id="phone" name="phone" placeholder="Phone Number"><br>
+        <label for="gender">Gender:</label><br>
+        <select id="gender" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select><br><br>
+        <input type="submit" value="Submit" class="submit"><br><br>
+        I have active account ...
+        <a href="index.html" class="sign-in">Sign in</a>
+      </form>
+      <script>
+        // Validation checks
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+          // Check if the email, password, phone, and gender fields are not empty
+          if (!form.email.value || !form.password.value || !form.phone.value || !form.gender.value) {
+            alert('All fields are required!^');
+            e.preventDefault();
+          }
+      
+          // Check if the email is valid
+          if (!/\S+@\S+\.\S+/.test(form.email.value)) {
+            alert('Please enter a valid email address!');
+            e.preventDefault();
+          }
+      
+          // Check if the password is at least 8 characters long
+          if (form.password.value.length < 8) {
+            alert('Password must be at least 8 characters long!');
+            e.preventDefault();
+          }
+      
+          // Check if the phone number is valid
+          if (!/^\d{10}$/.test(form.phone.value)) {
+            alert('Please Enter a valid phone number (10 digits)!');
+            e.preventDefault();
+          }
+        });
+      </script>
+      
+      
+    
+</body>
+</html>

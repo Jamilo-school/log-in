@@ -26,7 +26,7 @@
         <label for="password">Password:</label><br>
         <input type="password" id="password" name="password" placeholder="Enter password"><br>
         <label for="password">Repeat Password:</label><br>
-        <input type="password" id="password" name="password" placeholder="Confirm the password"><br>
+        <input type="password" id="password" name="Repeat-password" placeholder="Confirm the password"><br>
         <label for="phone">Phone Number:</label><br>
         <input type="text" id="phone" name="phone" placeholder="Phone Number"><br>
         <label for="gender">Gender:</label><br>
@@ -40,6 +40,7 @@
         <a href="index.html" class="sign-in">Sign in</a>
       </form>
       <script>
+
         // Validation checks
         const form = document.querySelector('form');
         form.addEventListener('submit', (e) => {
@@ -66,7 +67,8 @@
             alert('Please Enter a valid phone number (10 digits)!');
             e.preventDefault();
           }
-        });
+      
+          });
       </script>
       
       

@@ -29,7 +29,7 @@ var popup = document.createElement("div");
 popup.classList.add("popup");
 
 // Add the notification message to the pop up
-var message = document.createTextNode("🧑‍🎓Welcome to Academic Department Online Services.💫");
+var message = document.createTextNode("🧑‍🎓Welcome to Academic Department Online Services.j.s💫");
 popup.appendChild(message);
 
 // Add the pop up to the page
